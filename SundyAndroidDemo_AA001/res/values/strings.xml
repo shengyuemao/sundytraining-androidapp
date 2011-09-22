@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="UserName">用户名：</string>
+    <string name="Save">记住用户名</string>
+    <string name="Clear">清除用户名</string>
+    
+    <string name="hello">Hello World, LauncherActivity!</string>
+    <string name="app_name">SundyAndroidBaseDemo</string>
+    <string name="process_activitymaintest">Lesson4/ActivitySavaState</string>
+    <string name="lesson2_helloworld">Chapter2_Helloworld/HelloWorld</string>
+    <string name="lesson4_StartNewActivity">Chapter2_ActivityIntent/StartNewActivity</string>
+    <string name="lesson4_ActivityTransfer">Chapter2_ActivityIntent/ActivityTransfer</string>
+    <string name="lesson5_MusicServiceActivity">Chapter2_ServiceBase/MusicService</string>
+    <string name="lesson5_BeginServiceActivity">Chapter2_ServiceBase/BeginService</string>
+    <string name="lesson6_ViewActivity">Chapter2_UIBase/View</string>
+    <string name="lesson6_ViewGroupActivity">Chapter2_UIBase/ViewGroup</string>
+    <string name="lesson6_MyListActivity">Chapter2_UIBase/MyListView</string>
+    
+    <string name="lesson7_SharePreferenceDemo">Chapter2_Datastore/SharePreference</string>
+    <string name="lesson7_FileOperationDemo">Chapter2_Datastore/FileOperation</string>
+    <string name="lesson7_SQLiteDemo">Chapter2_Datastore/Sqlite</string>
+    <string name="lesson7_NetworkDemo">Chapter2_Datastore/Network</string>
+    <string name="lesson8_ContentResolver">Chapter2_ContentProvider/ContentResolver</string>
+    <string name="lesson9_SendBroadcast">Chapter2_BroadcastReceiver/SendBroadcast</string>
+    <string name="multimedia_audiohelloworld">Chapter3_Multimedia/AudioHelloworld</string>
+    
+    <string name="java4android_instanceof">Chapter1_Java4Android/Instanceof</string>
+	<string name="java4android_interationactivity">Chapter1_Java4Android/Interation</string>
+	<string name="java4android_innerclassadv">Chapter1_Java4Android/InnerClassAdv</string>
+	<string name="java4android_genericactivity">Chapter1_Java4Android/Generics</string>
+	<string name="java4android_threadactivity">Chapter1_Java4Android/MultiThread</string>
+</resources>
