@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class GestureCreateAtivity extends Activity {
@@ -18,6 +19,7 @@ public class GestureCreateAtivity extends Activity {
 	private GestureLibrary myGestureLibrary ;
 	private Gesture mGesture ;
 	private Button buttonSave ;
+	private EditText editTextSave ;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -41,6 +43,8 @@ public class GestureCreateAtivity extends Activity {
 			}
 		})  ;
 		
+		editTextSave = (EditText)findViewById(R.id.editTextCreate) ;
+		
 		buttonSave = (Button)findViewById(R.id.buttonCreateGesture)  ;
 		buttonSave.setOnClickListener(new OnClickListener() {
 			
@@ -49,9 +53,9 @@ public class GestureCreateAtivity extends Activity {
 				// TODO Auto-generated method stub
 				if(mGesture != null)
 				{
-					myGestureLibrary.addGesture(buttonSave.getText().toString(), mGesture)  ;
+					myGestureLibrary.addGesture(editTextSave.getText().toString(), mGesture)  ;
 					myGestureLibrary.save() ;
-					Toast.makeText(GestureCreateAtivity.this, "生成手势："+buttonSave.getText().toString(), 3000)  ;
+					Toast.makeText(GestureCreateAtivity.this, "生成手势："+editTextSave.getText().toString(), 3000)  ;
 					buttonSave.setText("")  ;
 				}
 				

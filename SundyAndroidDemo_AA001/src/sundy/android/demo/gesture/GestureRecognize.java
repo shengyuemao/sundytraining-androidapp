@@ -3,11 +3,6 @@ package sundy.android.demo.gesture;
 import java.util.ArrayList;
 
 import sundy.android.demo.configration.CommonConstants;
-import sundy.gesture.GestureActivity1;
-import sundy.gesture.GestureActivity2;
-import sundy.gesture.GestureActivity3;
-import sundy.gesture.GestureActivity4;
-import sundy.gesture.GestureCreateActivity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,7 +14,7 @@ import android.util.Log;
 public class GestureRecognize {
 	
 	//page index mark
-	private static int mIndex = 0 ;
+	private static int index = 1 ;
 	
 	
 	
@@ -35,27 +30,27 @@ public class GestureRecognize {
 		ArrayList<Prediction> predictions = myGestureLibrary.recognize(gesture) ;
 		if(predictions.size()>0)
 		{
-			Prediction curPrediction = predictions.get(0)  ;
-			if(curPrediction.score > 1.0)
+			Prediction prediction = predictions.get(0)  ;
+			if(prediction.score > 3.0)
 			{
-				Log.i(CommonConstants.LOGCAT_TAG_NAME, curPrediction.name) ;
+				Log.i(CommonConstants.LOGCAT_TAG_NAME, prediction.name) ;
 				if(prediction.name.equals("next"))
 				{
 					switch (index) {
 					case 1:
-						curContext.startActivity(new Intent(curContext,GestureShow2Activity2.class))  ;
+						curContext.startActivity(new Intent(curContext,GestureShow2Activity.class))  ;
 						++ index ;
 						break ;
 					case 2:
-						curContext.startActivity(new Intent(curContext,GestureShowActivity3.class))  ;
+						curContext.startActivity(new Intent(curContext,GestureShow3Activity.class))  ;
 						++ index ;
 						break ;
 					case 3:
-						curContext.startActivity(new Intent(curContext,GestureActivity4.class))  ;
+						curContext.startActivity(new Intent(curContext,GestureShow4Activity.class))  ;
 						++ index ;
 						break ;
 					case 4:
-						curContext.startActivity(new Intent(curContext,GestureActivity1.class))  ;
+						curContext.startActivity(new Intent(curContext,GestureShow1Activity.class))  ;
 						index = 1 ;
 						break;
 
@@ -65,16 +60,16 @@ public class GestureRecognize {
 					
 					
 				}else if(prediction.name.equals("end"))
-					curContext.startActivity(new Intent(curContext,GestureActivity4.class))  ;
+					curContext.startActivity(new Intent(curContext,GestureShow4Activity.class))  ;
 				else if(prediction.name.equals("first"))
-					curContext.startActivity(new Intent(curContext,GestureActivity1.class))  ;
+					curContext.startActivity(new Intent(curContext,GestureShow1Activity.class))  ;
 				else if(prediction.name.equals("prev"))
 				{
 					
 				}
 				else if(prediction.name.equals("create"))
 				{
-					curContext.startActivity(new Intent(curContext,GestureCreateActivity.class))  ;
+					curContext.startActivity(new Intent(curContext,GestureCreateAtivity.class))  ;
 				}
 			}
 		}

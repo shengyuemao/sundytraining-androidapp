@@ -7,26 +7,38 @@
     <string name="hello">Hello World, LauncherActivity!</string>
     <string name="app_name">SundyAndroidBaseDemo</string>
     <string name="process_activitymaintest">Lesson4/ActivitySavaState</string>
-    <string name="lesson2_helloworld">Chapter2_Helloworld/HelloWorld</string>
-    <string name="lesson4_StartNewActivity">Chapter2_ActivityIntent/StartNewActivity</string>
-    <string name="lesson4_ActivityTransfer">Chapter2_ActivityIntent/ActivityTransfer</string>
-    <string name="lesson5_MusicServiceActivity">Chapter2_ServiceBase/MusicService</string>
-    <string name="lesson5_BeginServiceActivity">Chapter2_ServiceBase/BeginService</string>
-    <string name="lesson6_ViewActivity">Chapter2_UIBase/View</string>
-    <string name="lesson6_ViewGroupActivity">Chapter2_UIBase/ViewGroup</string>
-    <string name="lesson6_MyListActivity">Chapter2_UIBase/MyListView</string>
+    <string name="lesson2_helloworld">Stage2_Helloworld/HelloWorld</string>
+    <string name="lesson4_StartNewActivity">Stage2_ActivityIntent/StartNewActivity</string>
+    <string name="lesson4_ActivityTransfer">Stage2_ActivityIntent/ActivityTransfer</string>
+    <string name="lesson5_MusicServiceActivity">Stage2_ServiceBase/MusicService</string>
+    <string name="lesson5_BeginServiceActivity">Stage2_ServiceBase/BeginService</string>
+    <string name="lesson6_ViewActivity">Stage2_UIBase/View</string>
+    <string name="lesson6_ViewGroupActivity">Stage2_UIBase/ViewGroup</string>
+    <string name="lesson6_MyListActivity">Stage2_UIBase/MyListView</string>
     
-    <string name="lesson7_SharePreferenceDemo">Chapter2_Datastore/SharePreference</string>
-    <string name="lesson7_FileOperationDemo">Chapter2_Datastore/FileOperation</string>
-    <string name="lesson7_SQLiteDemo">Chapter2_Datastore/Sqlite</string>
-    <string name="lesson7_NetworkDemo">Chapter2_Datastore/Network</string>
-    <string name="lesson8_ContentResolver">Chapter2_ContentProvider/ContentResolver</string>
-    <string name="lesson9_SendBroadcast">Chapter2_BroadcastReceiver/SendBroadcast</string>
-    <string name="multimedia_audiohelloworld">Chapter3_Multimedia/AudioHelloworld</string>
+    <string name="lesson7_SharePreferenceDemo">Stage2_Datastore/SharePreference</string>
+    <string name="lesson7_FileOperationDemo">Stage2_Datastore/FileOperation</string>
+    <string name="lesson7_SQLiteDemo">Stage2_Datastore/Sqlite</string>
+    <string name="lesson7_NetworkDemo">Stage2_Datastore/Network</string>
+    <string name="lesson8_ContentResolver">Stage2_ContentProvider/ContentResolver</string>
+    <string name="lesson9_SendBroadcast">Stage2_BroadcastReceiver/SendBroadcast</string>
     
-    <string name="java4android_instanceof">Chapter1_Java4Android/Instanceof</string>
-	<string name="java4android_interationactivity">Chapter1_Java4Android/Interation</string>
-	<string name="java4android_innerclassadv">Chapter1_Java4Android/InnerClassAdv</string>
-	<string name="java4android_genericactivity">Chapter1_Java4Android/Generics</string>
-	<string name="java4android_threadactivity">Chapter1_Java4Android/MultiThread</string>
+    
+    <string name="java4android_instanceof">Stage1_Java4Android/Instanceof</string>
+	<string name="java4android_interationactivity">Stage1_Java4Android/Interation</string>
+	<string name="java4android_innerclassadv">Stage1_Java4Android/InnerClassAdv</string>
+	<string name="java4android_genericactivity">Stage1_Java4Android/Generics</string>
+	<string name="java4android_threadactivity">Stage1_Java4Android/MultiThread</string>
+	
+	<string name="multimedia_audiohelloworld">Stage3_Multimedia/AudioHelloworld</string>
+	<string name="process_lifecycle">Stage3_Thread_Async/Process Lifycycle</string>
+	<string name="process_threadconcept">Stage3_Thread_Async/Thread Concept</string>
+	<string name="process_handlerconcept">Stage3_Thread_Async/Handler-Must need it</string>
+	<string name="process_asynctask">Stage3_Thread_Async/AsyncTask-Extend</string>
+	
+	<string name="gesture_gestureshow1">Stage3_Gesture/GestureShow1</string>
+	<string name="gesture_gestureshow2">Stage3_Gesture/GestureShow2</string>
+	<string name="gesture_gestureshow3">Stage3_Gesture/GestureShow3</string>
+	<string name="gesture_gestureshow4">Stage3_Gesture/GestureShow4</string>
+	
 </resources>

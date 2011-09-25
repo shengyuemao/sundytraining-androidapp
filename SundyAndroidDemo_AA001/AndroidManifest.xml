@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
     
     <application android:icon="@drawable/icon" android:label="@string/app_name">
         <activity android:name=".LauncherActivity"
@@ -166,7 +168,7 @@
 			</intent-filter>
 		</activity>
 		<!-- for stage2 async operation -->
-		<activity android:name=".processthread.ProcessLifecycleActivity" android:label="@string/subject_process_lifecycle">
+		<activity android:name=".processthread.ProcessLifecycleActivity" android:label="@string/process_lifecycle">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.SAMPLE_CODE" />
@@ -194,12 +196,32 @@
 			</intent-filter>
 		</activity>
 		
+		<activity android:name=".gesture.GestureShow1Activity" android:label="@string/gesture_gestureshow1">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".gesture.GestureCreateActivity" android:label="gesture_create"/>			
+		<activity android:name=".gesture.GestureShow2Activity" android:label="@string/gesture_gestureshow2">			
+		</activity>
+		<activity android:name=".gesture.GestureShow3Activity" android:label="@string/gesture_gestureshow3">			
+		</activity>
+		<activity android:name=".gesture.GestureShow4Activity" android:label="@string/gesture_gestureshow4">			
+		</activity>
+		
 		<service android:name=".service.BeginService"/>
 		<service android:name=".service.MusicService"/>
 		
 		<receiver android:name=".broadcastreceiver.MyBroadcastReceiver">
 			<intent-filter>
 				<action android:name="sundy.android.demo.HiMessage"/>
+			</intent-filter>
+		</receiver>
+		<receiver android:name=".widget.SimpleWidgetDemo">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
 			</intent-filter>
 		</receiver>
 		
