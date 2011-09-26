@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import sundy.android.demo.R;
 
+import android.R.bool;
 import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -27,6 +28,7 @@ public class SensorPlayerActivity extends Activity implements SensorEventListene
 	private Sensor sensor ;
 	private static MediaPlayer mediaPlayer  ;
 	private Boolean isPlaying  = false ;
+	private Boolean turnPositive = true ;
 	
 	private float x, y, z, last_x, last_y, last_z;
 	 private long lastUpdate;
@@ -96,6 +98,30 @@ public class SensorPlayerActivity extends Activity implements SensorEventListene
 	
 	
 	/**
+	 * 判定手机所处面
+	 * @param x 
+	 * @param y
+	 * @param z
+	 * @return 如果是手机正面放置返回1 ， 负面放置返回0 ，其它返回-1
+	 */
+	private int turnPositive(float x, float y, float z) 
+	{
+		if(Math.abs(x)<1 && Math.abs(y)<1)
+		{
+			if(z>9 && z<10)
+				return 1 ;
+			else if(z>-12 && z<-9)
+				return 0 ;
+			else 
+				return -1 ;
+		}else {
+			return -1  ;
+		}
+		
+	}
+	
+	
+	/**
 	 * 具体感应器改变操作
 	 * @param sensor 传感器
 	 * @param values 传感器的值
@@ -129,6 +155,27 @@ public class SensorPlayerActivity extends Activity implements SensorEventListene
 		    	  
 		      }
 		    }
+		    
+		    //检测手机翻转 
+		    int _returnIndex = turnPositive(x, y, z) ;
+		    if(_returnIndex ==1)
+		    {
+		    	Log.i("sundy", "正面"+_returnIndex) ;
+		    	if(!mediaPlayer.isPlaying())
+		    	{
+		    		mediaPlayer.start() ;
+		    	}		    	
+		    	turnPositive = true ;
+		    }else if(_returnIndex ==0)
+		    {
+		    	Log.i("sundy", "负面"+_returnIndex) ;
+		    	if(mediaPlayer.isPlaying())
+		    	{
+		    		mediaPlayer.pause() ;
+		    	}		    	
+		    	turnPositive = false ;
+		    }
+		    
 		    last_x = x;
 		    last_y = y;
 		    last_z = z;

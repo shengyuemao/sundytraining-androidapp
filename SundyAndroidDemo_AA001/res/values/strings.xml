@@ -3,6 +3,20 @@
     <string name="UserName">用户名：</string>
     <string name="Save">记住用户名</string>
     <string name="Clear">清除用户名</string>
+    <string name="title">Sigma Sensors</string>
+    <string name="myTextView1">Current Temprature：</string>
+    <string name="myTextView2">Current Magnetic x：</string>
+    <string name="myTextView3">Current Magnetic y：</string>
+    <string name="myTextView4">Current Magnetic z：</string>
+    <string name="myTextView5">Current Accelero x：</string>
+    <string name="myTextView6">Current Accelero y：</string>
+    <string name="myTextView7">Current Accelero z：</string>
+    <string name="myTextView8">Current Oraenttation x：</string>
+    <string name="myTextView9">Current Oraenttation y：</string>
+    <string name="myTextView10">Current Oraenttation z：</string>
+    <string name="myTextView11">Current Light：</string>
+    <string name="myTextView12">Current Proximity：</string>    
+    <string name="btnAccelerometerText">加速度感应</string>
     
     <string name="hello">Hello World, LauncherActivity!</string>
     <string name="app_name">SundyAndroidBaseDemo</string>
@@ -40,5 +54,12 @@
 	<string name="gesture_gestureshow2">Stage3_Gesture/GestureShow2</string>
 	<string name="gesture_gestureshow3">Stage3_Gesture/GestureShow3</string>
 	<string name="gesture_gestureshow4">Stage3_Gesture/GestureShow4</string>
+	
+	<string name="sensor_activitymainlist">Stage3_Sensor/SensorList</string>
+	<string name="sensor_activitymain2">Stage3_Sensor/DeviceSensorsInfo</string>
+	<string name="sensor_activitymain">Stage3_Sensor/SensorMain</string>
+	<string name="sensor_sensorshow">Stage3_Sensor/SensorShow</string>
+	<string name="sensor_compassdemo">Stage3_Sensor/CompassDemo</string>
+	<string name="sensor_playeractivity">Stage3_Sensor/SensorPlayerDemo</string>
 	
 </resources>

@@ -211,6 +211,39 @@
 		<activity android:name=".gesture.GestureShow4Activity" android:label="@string/gesture_gestureshow4">			
 		</activity>
 		
+		<activity android:name=".sensor.ActivityMainList" android:label="@string/sensor_activitymainlist">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".sensor.ActivityMain" android:label="@string/sensor_activitymain">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".sensor.ActivityMain2" android:label="@string/sensor_activitymain2">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".sensor.ActivitySensorShow" android:label="@string/sensor_sensorshow"/>
+		<activity android:name=".sensor.CompassDemo" android:label="@string/sensor_compassdemo">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".sensor.SensorPlayerActivity" android:label="@string/sensor_playeractivity">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+		</intent-filter>
+		</activity>
+		
 		<service android:name=".service.BeginService"/>
 		<service android:name=".service.MusicService"/>
 		
