@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 
 /**
@@ -47,6 +48,9 @@ public class ThreadConceptActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.layout_threadconcept)  ;
 		mImageView = (ImageView)this.findViewById(R.id.imageThreadConcept) ;
+		
+		
+	
 		//1. load image in main thread 
 		findViewById(R.id.buttonWorkThread).setOnClickListener(new OnClickListener(){
 			
@@ -88,7 +92,6 @@ public class ThreadConceptActivity extends Activity {
 					@Override
 					public void run() {
 						// TODO Auto-generated method stub
-						
 			            mImageView.post(new Runnable(){
 			            	@Override
 							public void run() {
@@ -115,6 +118,7 @@ public class ThreadConceptActivity extends Activity {
 	// the Drawable loadImage main function 
 	private Drawable loadImageFromNetwork(String imageUrl)
 	{
+		
 		Drawable drawable = null;
 		try {
 			drawable = Drawable.createFromStream(

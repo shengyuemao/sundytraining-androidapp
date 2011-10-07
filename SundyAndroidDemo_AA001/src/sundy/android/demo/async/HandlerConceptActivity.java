@@ -45,7 +45,7 @@ public class HandlerConceptActivity extends Activity {
 				@Override
 				public void handleMessage(Message msg) {
 					// TODO Auto-generated method stub
-					super.handleMessage(msg);
+				
 					Log.i(CommonConstants.LOGCAT_TAG_NAME, "Get the message by HandlerThread "+ msg.getData().getString(HANDLER_KEY))  ;
 				}
 	        	
@@ -139,7 +139,11 @@ public class HandlerConceptActivity extends Activity {
 					public void run() {
 						// TODO Auto-generated method stub
 						ProcessCaculate() ;
+						
+						
+						
 						Handler lab2Handler = new Handler()  ;
+					
 						lab2Handler.sendMessage(defineNewMessage("Lab2")) ;
 					}
 					

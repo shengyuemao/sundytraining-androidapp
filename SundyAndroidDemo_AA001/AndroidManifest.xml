@@ -11,9 +11,12 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     
-    
+        
     <application android:icon="@drawable/icon" android:label="@string/app_name">
+    <uses-library android:name="com.google.android.maps"/>
         <activity android:name=".LauncherActivity"
                   android:label="@string/app_name">
             <intent-filter>
@@ -167,29 +170,36 @@
 				<category android:name="android.intent.category.SAMPLE_CODE" />
 			</intent-filter>
 		</activity>
-		<!-- for stage2 async operation -->
-		<activity android:name=".processthread.ProcessLifecycleActivity" android:label="@string/process_lifecycle">
+		<!-- for stage3 async operation -->
+		<activity android:name=".async.WholeAsyncActivity" android:label="@string/process_wholeasync">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.SAMPLE_CODE" />
 			</intent-filter>
 		</activity>
 		
-		<activity android:name=".processthread.ThreadConceptActivity" android:label="@string/process_threadconcept">
+		<activity android:name=".async.ProcessLifecycleActivity" android:label="@string/process_lifecycle">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.SAMPLE_CODE" />
 			</intent-filter>
 		</activity>
 		
-		<activity android:name=".processthread.HandlerConceptActivity" android:label="@string/process_handlerconcept">
+		<activity android:name=".async.ThreadConceptActivity" android:label="@string/process_threadconcept">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.SAMPLE_CODE" />
 			</intent-filter>
 		</activity>
 		
-		<activity android:name=".processthread.AsyncTaskTestActivity" android:label="@string/process_asynctask">
+		<activity android:name=".async.HandlerConceptActivity" android:label="@string/process_handlerconcept">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".async.AsyncTaskTestActivity" android:label="@string/process_asynctask">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.SAMPLE_CODE" />
@@ -238,6 +248,20 @@
 		</activity>
 		
 		<activity android:name=".sensor.SensorPlayerActivity" android:label="@string/sensor_playeractivity">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+		</intent-filter>
+		</activity>
+		
+		<activity android:name=".maplocation.MyMapActivity" android:label="@string/maplocation_mymap">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+		</intent-filter>
+		</activity>
+		
+		<activity android:name=".maplocation.GeoDemoActivity" android:label="@string/maplocation_geodemo">
 		<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.SAMPLE_CODE" />

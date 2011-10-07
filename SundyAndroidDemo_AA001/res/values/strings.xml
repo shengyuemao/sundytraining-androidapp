@@ -49,6 +49,8 @@
 	<string name="process_threadconcept">Stage3_Thread_Async/Thread Concept</string>
 	<string name="process_handlerconcept">Stage3_Thread_Async/Handler-Must need it</string>
 	<string name="process_asynctask">Stage3_Thread_Async/AsyncTask-Extend</string>
+	<string name="process_wholeasync">Stage3_Thread_Async/WholeAsyncDemo</string>
+
 	
 	<string name="gesture_gestureshow1">Stage3_Gesture/GestureShow1</string>
 	<string name="gesture_gestureshow2">Stage3_Gesture/GestureShow2</string>
@@ -61,5 +63,8 @@
 	<string name="sensor_sensorshow">Stage3_Sensor/SensorShow</string>
 	<string name="sensor_compassdemo">Stage3_Sensor/CompassDemo</string>
 	<string name="sensor_playeractivity">Stage3_Sensor/SensorPlayerDemo</string>
+	
+	<string name="maplocation_mymap">Stage3_MapLocation/MyGoogleMap</string>
+	<string name="maplocation_geodemo">Stage3_MapLocation/GeoDemo</string>
 	
 </resources>
