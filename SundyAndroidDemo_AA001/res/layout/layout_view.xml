@@ -18,9 +18,29 @@
     <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="女" android:id="@+id/radio1"></RadioButton>
     <ProgressBar android:id="@+id/progressBar1" android:layout_width="wrap_content" android:layout_height="wrap_content"></ProgressBar>
     <CheckBox android:text="CheckBox" android:id="@+id/checkBox1" android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
-    <Spinner android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/spinner1"></Spinner>
+    <Spinner android:prompt="@string/UserName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/spinner1"></Spinner>
     <DatePicker android:id="@+id/datePicker1" android:layout_width="wrap_content" android:layout_height="wrap_content"></DatePicker>
     <DigitalClock android:text="DigitalClock" android:id="@+id/digitalClock1" android:layout_width="wrap_content" android:layout_height="wrap_content"></DigitalClock>
     <AnalogClock android:id="@+id/analogClock1" android:layout_width="wrap_content" android:layout_height="wrap_content"></AnalogClock>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:text="9-patch_Tiny"
+        android:textSize="8sp"
+        android:background="@drawable/simple_button"/>
+
+	<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:text="9-Patch_Biiiiiiig text!"
+        android:textSize="30sp"
+        android:background="@drawable/simple_button"/>
+        <sundy.android.demo.uibase.CustomView android:id="@+id/customView" 
+        android:layout_width="match_parent" android:layout_height="50dp"/>
 </LinearLayout>
 </ScrollView>

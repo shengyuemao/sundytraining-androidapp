@@ -1,0 +1,71 @@
+package sundy.android.demo.graphic;
+
+import sundy.android.demo.configration.CommonConstants;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+
+public class GameControlRobotView extends View{
+
+	int miCount = 0 ;
+	int x,y = 0 ;
+	
+	
+	public GameControlRobotView(Context context) {
+		super(context);
+		setFocusable(true) ;
+		setFocusableInTouchMode(true) ;
+	}
+
+	@Override
+	public boolean onKeyUp(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		Log.i(CommonConstants.LOGCAT_TAG_NAME, "View onKeyUp") ;
+		return super.onKeyUp(keyCode, event);
+	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		// TODO Auto-generated method stub
+		Log.i(CommonConstants.LOGCAT_TAG_NAME, "View onTouchEvent") ;
+		return super.onTouchEvent(event) ;
+	}
+
+	@Override
+	protected void onDraw(Canvas canvas) {
+		// TODO Auto-generated method stub
+		if(miCount < 100)
+		{
+			miCount ++ ;
+		}else
+		{
+			miCount = 0 ; 			
+		}
+		Paint _paint = new Paint()  ;
+		switch(miCount%4)
+		{
+		case 0:
+			_paint.setColor(Color.BLUE) ;
+			break ;
+		case 1:
+			_paint.setColor(Color.GREEN) ;
+			break ;
+		case 2:
+			_paint.setColor(Color.RED) ;
+			break ;
+		case 3:
+			_paint.setColor(Color.YELLOW) ;
+			break ;
+		default:
+			_paint.setColor(Color.WHITE) ;
+			break ;
+		}
+		canvas.drawRect(x,y,x+60,y+40,_paint) ;
+	}
+
+}
