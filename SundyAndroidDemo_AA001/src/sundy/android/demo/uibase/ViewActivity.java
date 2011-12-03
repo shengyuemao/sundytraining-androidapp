@@ -3,6 +3,7 @@
  */
 package sundy.android.demo.uibase;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import sundy.android.demo.R;
@@ -23,6 +24,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.*;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -37,11 +39,28 @@ public class ViewActivity extends Activity {
 	private String[] cities = {"成都","北京","上海","郑州"} ;
 	private ArrayAdapter<String> adapter ;
 	private Calendar cal ;
+	private CustomView customView ;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_vew)  ;
+		setContentView(R.layout.layout_view)  ;
+		
+		
+		//CustomView
+		/*customView = (CustomView)findViewById(R.id.customView) ;
+		customView.setText("Hello Custom View") ;
+		if(customView != null)
+		{
+			customView.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View arg0) {
+					// TODO Auto-generated method stub
+					Toast.makeText(ViewActivity.this, customView.getText(), 3000).show() ;
+				}
+			}) ;
+		}
 		
 		//RadioButton
 		RadioButton radioButton1 = (RadioButton)findViewById(R.id.radioButton1)  ;
@@ -72,12 +91,19 @@ public class ViewActivity extends Activity {
 				
 			}
 			
-		}) ;
+		}) ;*/
 		
 		//Spinner 
 		Spinner spinner1 = (Spinner)findViewById(R.id.spinner1) ;
-		adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,cities)  ;
+		adapter = new ArrayAdapter<String>(this,R.layout.layout_spinner_item,cities)  ;
 		spinner1.setAdapter(adapter) ;
+		/*ArrayList<MyItem> items = new ArrayList<MyItem>()  ;
+		items.add(new MyItem("Sundy", "Tieto"))  ;
+		items.add(new MyItem("Tudou", "Youku")) ;
+		MySpinnerAdapter adapter = new MySpinnerAdapter(this, items)  ;
+		spinner1.setAdapter(adapter) ;*/
+		
+		
 		spinner1.setOnItemSelectedListener(new OnItemSelectedListener(){
 
 			@Override
@@ -90,7 +116,7 @@ public class ViewActivity extends Activity {
 			@Override
 			public void onNothingSelected(AdapterView<?> arg0) {
 				// TODO Auto-generated method stub
-				
+				Toast.makeText(ViewActivity.this, "你什么都没有选中", Toast.LENGTH_SHORT).show() ;
 			}
 			
 		}) ;

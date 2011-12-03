@@ -11,6 +11,8 @@ import java.util.Map;
 import sundy.android.demo.configration.CommonConstants;
 
 import android.app.ListActivity;
+import android.os.*;
+import android.os.Process;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -41,7 +43,17 @@ public class LauncherActivity extends ListActivity {
     }
     
     
-    protected List getData(String prefix) {
+    @Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		Log.i(CommonConstants.LOGCAT_TAG_NAME, "Main Activity Destory")  ;
+		Process.killProcess(Process.myPid())  ;
+		System.exit(0) ;
+	}
+
+
+	protected List getData(String prefix) {
         List<Map> myData = new ArrayList<Map>();
 
         Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);

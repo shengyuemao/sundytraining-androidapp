@@ -4,6 +4,7 @@
 package sundy.android.demo;
 
 import android.app.Application;
+import android.content.res.Configuration;
 import android.util.Log;
 import sundy.android.demo.configration.*;
 
@@ -25,6 +26,13 @@ public class SundyAndroidDemoApplication extends Application {
 		// TODO Auto-generated method stub
 		super.onLowMemory();
 		Log.i(CommonConstants.LOGCAT_APP_NAME, "LowMemory")  ;
+	}
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		// TODO Auto-generated method stub
+		super.onConfigurationChanged(newConfig);
+		Log.i(CommonConstants.LOGCAT_APP_NAME, "ConfigurationChanged")  ;
 	}
 
 	@Override

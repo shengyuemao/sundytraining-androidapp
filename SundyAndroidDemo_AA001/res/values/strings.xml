@@ -22,6 +22,7 @@
     <string name="app_name">SundyAndroidBaseDemo</string>
     <string name="process_activitymaintest">Lesson4/ActivitySavaState</string>
     <string name="lesson2_helloworld">Stage2_Helloworld/HelloWorld</string>
+    <string name="lesson2_AssetsAndRaw">Stage2_Helloworld/AssetsAndRaw</string>
     <string name="lesson4_StartNewActivity">Stage2_ActivityIntent/StartNewActivity</string>
     <string name="lesson4_ActivityTransfer">Stage2_ActivityIntent/ActivityTransfer</string>
     <string name="lesson5_MusicServiceActivity">Stage2_ServiceBase/MusicService</string>
@@ -29,6 +30,18 @@
     <string name="lesson6_ViewActivity">Stage2_UIBase/View</string>
     <string name="lesson6_ViewGroupActivity">Stage2_UIBase/ViewGroup</string>
     <string name="lesson6_MyListActivity">Stage2_UIBase/MyListView</string>
+    <string name="lesson6_SundyListActivity">Stage2_UIBase/MyListView2</string>
+    <string name="lesson6_MyLayoutActivity">Stage2_UIBase/MyTableActivity</string>
+    <string name="lesson6_MyGridViewActivity">Stage2_UIBase/MyGridViewActivity</string>
+    <string name="lesson6_MyGalleryActivity">Stage2_UIBase/MyGalleryActivity</string>
+    <string name="lesson6_MyDrawerActivity">Stage2_UIBase/MyDrawerActivity</string>
+    <string name="lesson6_FormWidgetActivity">Stage2_UIBase/FormWidgetActivity</string>
+    <string name="lesson6_BaseDialogActivity">Stage2_UIBase/BaseDialogActivity</string>
+    <string name="lesson6_FullScreenGalleryActivity">Stage2_UIBase/FullScreenGallery</string>
+    <string name="lesson6_NotificationSampleActivity">Stage2_UIBase/NotificationSample</string>
+    <string name="lesson6_StyleActivity">Stage2_UIBase/StyleSample</string>
+    
+    <string name="lesson4_LifecycleActivity">Stage2_ActivityIntent/LifecycleActivity</string>
     
     <string name="lesson7_SharePreferenceDemo">Stage2_Datastore/SharePreference</string>
     <string name="lesson7_FileOperationDemo">Stage2_Datastore/FileOperation</string>
@@ -66,5 +79,13 @@
 	
 	<string name="maplocation_mymap">Stage3_MapLocation/MyGoogleMap</string>
 	<string name="maplocation_geodemo">Stage3_MapLocation/GeoDemo</string>
+	<string name="graphic_HelloGameItemControlActivity">Stage2_Graphic/HelloGameItemControl</string>
+	<string name="graphic_drawableresource">Stage2_Graphic/DrawableGetResource</string>
+	<string name="graphic_drawableresourcexml">Stage2_Graphic/DrawableGetResourceXML</string>
+	<string name="graphic_customdrawable">Stage2_Graphic/CustomDrawable</string>
+	<string name="sqlite_usermanager">Stage2_Datastore/UserManager</string>
+	<string name="contentprovider_contactcontract">Stage2_ContentProvider/ContactContracts</string>
+	
+	<string name="widget_shortcut">SundyDemo</string>
 	
 </resources>

@@ -15,7 +15,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     
         
-    <application android:icon="@drawable/icon" android:label="@string/app_name">
+    <application android:name=".SundyAndroidDemoApplication" android:icon="@drawable/icon" android:label="@string/app_name">
     <uses-library android:name="com.google.android.maps"/>
         <activity android:name=".LauncherActivity"
                   android:label="@string/app_name">
@@ -25,8 +25,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 		
 		<activity android:name=".helloworld.HelloWorld" android:label="@string/lesson2_helloworld">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".helloworld.AssetsAndRawActivity" android:label="@string/lesson2_AssetsAndRaw">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.SAMPLE_CODE" />
@@ -50,9 +58,17 @@
 			</intent-filter>
 		</activity>
 		
+		<activity android:name=".activityandintent.LifecycleActivity" android:label="@string/lesson4_LifecycleActivity" 
+		android:configChanges="orientation|keyboard">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
 		<activity android:name=".activityandintent.SecondActivity" android:label="SecondActivity">
 		</activity>
-		<activity android:name=".activityandintent.ThirdActivity" android:label="ThirdActivity">
+		<activity android:name=".activityandintent.ThirdActivity" android:label="ThirdActivity" android:theme="@style/Theme.FloatActivity">
 		</activity>
 		
 		<activity android:name=".service.MusicServiceActivity" android:label="@string/lesson5_MusicServiceActivity">
@@ -69,7 +85,76 @@
 			</intent-filter>
 		</activity>
 		
+		<activity android:name=".uibase.BaseDialogActivity" android:label="@string/lesson6_BaseDialogActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
 		<activity android:name=".uibase.ViewActivity" android:label="@string/lesson6_ViewActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".uibase.SundyListActivity" android:label="@string/lesson6_SundyListActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".uibase.MyLayoutActivity" android:label="@string/lesson6_MyLayoutActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".uibase.MyGridViewActivity" android:label="@string/lesson6_MyGridViewActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".uibase.FullScreenGallery" android:label="@string/lesson6_FullScreenGalleryActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".uibase.FormWidgetActivity" android:label="@string/lesson6_FormWidgetActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:theme="@style/SundyTheme.Red" android:name=".uibase.StyleActivity" android:label="@string/lesson6_StyleActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".uibase.MyGalleryActivity" android:label="@string/lesson6_MyGalleryActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".uibase.NotificationSampleActivity" android:label="@string/lesson6_NotificationSampleActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".uibase.MyDrawerActivity" android:label="@string/lesson6_MyDrawerActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.SAMPLE_CODE" />
@@ -261,6 +346,34 @@
 		</intent-filter>
 		</activity>
 		
+		<activity android:name=".graphic.HelloGameItemControlActivity" android:label="@string/graphic_HelloGameItemControlActivity">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+		</intent-filter>
+		</activity>
+		
+		<activity android:name=".graphic.DrawableResourceActivity" android:label="@string/graphic_drawableresource">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+		</intent-filter>
+		</activity>
+		
+		<activity android:name=".graphic.DrawableResourceXMLActivity" android:label="@string/graphic_drawableresourcexml">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+		</intent-filter>
+		</activity>
+		
+		<activity android:name=".graphic.CustomDrawableActivity" android:label="@string/graphic_customdrawable">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+		</intent-filter>
+		</activity>
+		
 		<activity android:name=".maplocation.GeoDemoActivity" android:label="@string/maplocation_geodemo">
 		<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
@@ -268,7 +381,27 @@
 		</intent-filter>
 		</activity>
 		
+		<activity android:name=".sqlite.UserManagerActivity" android:label="@string/sqlite_usermanager">
+		<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+		</intent-filter>
+		</activity>
+		<activity android:name=".widget.ShortcutActivity" android:label="@string/widget_shortcut">
+		<intent-filter>
+			<action android:name="android.intent.action.CREATE_SHORTCUT"/>
+		</intent-filter>
+		</activity>
+		
+		<activity android:name=".contentprovider.ContactContractActivity" android:label="@string/contentprovider_contactcontract">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+		</activity>
+		
 		<service android:name=".service.BeginService"/>
+		<service android:name=".service.BeginIntentService"/>
 		<service android:name=".service.MusicService"/>
 		
 		<receiver android:name=".broadcastreceiver.MyBroadcastReceiver">
@@ -280,6 +413,8 @@
 			<intent-filter>
 				<action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
 			</intent-filter>
+			<meta-data android:name="android.appwidget.provider" android:resource="@xml/simplewidget_provider">
+			</meta-data>
 		</receiver>
 		
 		<provider android:name=".contentprovider.CustomProvider" android:authorities="sundy.android.demo.provider"></provider>

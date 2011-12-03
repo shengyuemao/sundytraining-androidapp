@@ -111,6 +111,7 @@ public class NetworkDemo extends Activity {
 		//执行execute获取按指定格式获取内容
 		String _Content = new String(httpClient.execute(_Get, _ResponseHandler).getBytes("ISO-8859-1"));
 		return _Content;
+		//HttpClient
 	}
 	
 	public String Html2Text(String inputString) {

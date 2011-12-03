@@ -20,4 +20,9 @@
         <item>#23702B</item>  
         <item>#5F3A20</item>  
     </string-array>  
+    <string-array name="spinnername">
+    	<item>Hello</item>
+    	<item>Sundy</item>
+    	<item>China</item>
+    </string-array>
 </resources>  

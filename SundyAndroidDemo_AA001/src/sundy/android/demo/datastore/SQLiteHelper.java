@@ -23,7 +23,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 		_CreateTableScript.append("				,[CreateDate] datetime NOT NULL");
 		_CreateTableScript.append("				,[State] integer NOT NULL");
 		_CreateTableScript.append("				)");
-		
+
 		db.execSQL(_CreateTableScript.toString());
 	}
 

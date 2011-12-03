@@ -1,5 +1,7 @@
 package sundy.android.demo.graphic;
 
+import java.net.InterfaceAddress;
+
 import sundy.android.demo.configration.CommonConstants;
 import android.content.Context;
 import android.graphics.Canvas;
@@ -15,17 +17,39 @@ public class GameControlRobotView extends View{
 	int miCount = 0 ;
 	int x,y = 0 ;
 	
+	OnGameKeyDownListner mOnGameKeyDownListner  ;
+	
+	public interface OnGameKeyDownListner
+	{
+		public void onKeyDown(Object keyObject) ;
+		
+	}
+	
+	public void setOnGameKeyDown(OnGameKeyDownListner gameKeyDownListner)
+	{
+		mOnGameKeyDownListner = gameKeyDownListner  ;
+	}
 	
 	public GameControlRobotView(Context context) {
 		super(context);
 		setFocusable(true) ;
 		setFocusableInTouchMode(true) ;
 	}
+	
+	protected void onGameKeyDown(Object keyObject)
+	{
+		
+	}
 
 	@Override
 	public boolean onKeyUp(int keyCode, KeyEvent event) {
 		// TODO Auto-generated method stub
 		Log.i(CommonConstants.LOGCAT_TAG_NAME, "View onKeyUp") ;
+		if(mOnGameKeyDownListner != null)
+		{
+			mOnGameKeyDownListner.onKeyDown("Hello") ;
+			onGameKeyDown("hello") ;
+		}
 		return super.onKeyUp(keyCode, event);
 	}
 

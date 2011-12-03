@@ -1,6 +1,7 @@
 package sundy.android.demo.graphic;
 
 import sundy.android.demo.configration.CommonConstants;
+import sundy.android.demo.graphic.GameControlRobotView.OnGameKeyDownListner;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
+import android.widget.Toast;
 
 public class HelloGameItemControlActivity extends Activity {
 
@@ -18,6 +20,17 @@ public class HelloGameItemControlActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		mGameView = new GameControlRobotView(this) ;
+		
+		mGameView.setOnGameKeyDown(new OnGameKeyDownListner() {
+			
+			@Override
+			public void onKeyDown(Object keyObject) {
+				// TODO Auto-generated method stub
+				Toast.makeText(HelloGameItemControlActivity.this, keyObject.toString(), 3000).show() ;
+			}
+		})  ;
+		
+		
 		getWindow().getDecorView().setOnClickListener(new OnClickListener() {
 			
 			@Override
