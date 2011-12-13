@@ -86,6 +86,21 @@
 	<string name="sqlite_usermanager">Stage2_Datastore/UserManager</string>
 	<string name="contentprovider_contactcontract">Stage2_ContentProvider/ContactContracts</string>
 	
+	<string name="advui_shakedesk">Stage3_AdvanceUI/ShakeDeskSample</string>
+	<string name="style_simple">Stage3_AdvanceUI/Style/SimpleStyle</string>
+	<string name="animation_rotate3d">Stage3_AdvanceUI/Animation/Rotate3D</string>
+	<string name="animation_basetweenanimation">Stage3_AdvanceUI/Animation/BaseTweenAnimation</string>
+	<string name="style_bubbletheme">Stage3_AdvanceUI/Style/BubbleTheme</string>
+	<string name="style_blurtheme">Stage3_AdvanceUI/Style/BlurTheme</string>
+	<string name="skin_themeskin">Stage3_AdvanceUI/Skin/SkinTheme</string>
+	<string name="skin_layoutskin">Stage3_AdvanceUI/Skin/LayoutSkin</string>
+	<string name="performance_delayload">Stage3_AdvanceUI/Performance/DelayLoad</string>
+	<string name="performance_fastswitch">Stage3_AdvanceUI/Performance/FastSwitch</string>
+	<string name="animation_simpleanimation">Stage3_AdvanceUI/Animation/SimpleAnimation</string>
+	<string name="animation_fadeanimation">Stage3_AdvanceUI/Animation/FadeAnimation</string>
+	<string name="animation_baseframeanimation">Stage3_AdvanceUI/Animation/BaseFrameAnimation</string>
+
 	<string name="widget_shortcut">SundyDemo</string>
+	<string name="widget_metadata">Stage3_Widget/MetaData</string>
 	
 </resources>

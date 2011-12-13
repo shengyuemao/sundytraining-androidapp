@@ -19,7 +19,7 @@ public class MySpinnerAdapter extends BaseAdapter {
 
 	List<MyItem> mMyItems  ;
 	Context mContext  ;
-	
+	ViewHolder viewHolder ;
 	
 	public MySpinnerAdapter(Context context,List<MyItem> items)
 	{
@@ -49,12 +49,42 @@ public class MySpinnerAdapter extends BaseAdapter {
 	public View getView(int arg0, View arg1, ViewGroup arg2) {
 		// TODO Auto-generated method stub
 		MyItem myItem = mMyItems.get(arg0)  ;
-		arg1 = LayoutInflater.from(mContext).inflate(R.layout.layout_spinner_item2, null)  ;
-		TextView textView1 = (TextView)arg1.findViewById(R.id.textView1)  ;
-		TextView textView2 = (TextView)arg1.findViewById(R.id.textView2)  ;
-		textView1.setText("Name:"+myItem.getName())  ;
-		textView2.setText("Company:"+myItem.getCompany())  ;
+		if(arg1 == null)
+		{
+			arg1 = LayoutInflater.from(mContext).inflate(R.layout.layout_spinner_item2, null)  ;
+			TextView textView1 = (TextView)arg1.findViewById(R.id.textView1)  ;
+			TextView textView2 = (TextView)arg1.findViewById(R.id.textView2)  ;
+			viewHolder = new ViewHolder()  ;
+			viewHolder.setTextView1(textView1) ;
+			viewHolder.setTextView2(textView2)  ;
+			arg1.setTag(viewHolder) ;
+			
+		}else {
+			viewHolder = (ViewHolder)arg1.getTag()  ;
+		}
+		
+		viewHolder.getTextView1().setText("Name:"+myItem.getName())  ;
+		viewHolder.getTextView2().setText("Company:"+myItem.getCompany())  ;
+
 		return arg1 ;
+	}
+	
+	public static class ViewHolder
+	{
+		private TextView textView1  ;
+		private TextView textView2  ;
+		public TextView getTextView1() {
+			return textView1;
+		}
+		public void setTextView1(TextView textView1) {
+			this.textView1 = textView1;
+		}
+		public TextView getTextView2() {
+			return textView2;
+		}
+		public void setTextView2(TextView textView2) {
+			this.textView2 = textView2;
+		}
 	}
 	
 

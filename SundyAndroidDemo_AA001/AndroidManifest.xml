@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="sundy.android.demo"
-      android:versionCode="1"
-      android:versionName="1.0">
+      android:versionCode="2"
+      android:versionName="2.0">
       
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
@@ -13,6 +13,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     
         
     <application android:name=".SundyAndroidDemoApplication" android:icon="@drawable/icon" android:label="@string/app_name">
@@ -24,6 +27,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+           
         </activity>
 
 		
@@ -391,6 +395,7 @@
 		<intent-filter>
 			<action android:name="android.intent.action.CREATE_SHORTCUT"/>
 		</intent-filter>
+		<meta-data android:name="sundymeta" android:value="Sundy's Meta-data = Today Shortcut"/>
 		</activity>
 		
 		<activity android:name=".contentprovider.ContactContractActivity" android:label="@string/contentprovider_contactcontract">
@@ -400,6 +405,98 @@
 			</intent-filter>
 		</activity>
 		
+		<!-- start advance UI  -->
+        <activity android:name=".uiadv.style.StyleActivity" android:label="@string/style_simple">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:name=".uiadv.animation.Rotate3DActivity" android:label="@string/animation_rotate3d"
+            android:windowAnimationStyle="@style/Rotate3DActivityAnimation">
+            <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:theme="@style/MyBubbleTheme" android:name=".uiadv.style.BubbleThemeActivity" android:label="@string/style_bubbletheme">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:name=".uiadv.style.BlurThemeActivity" android:theme="@style/MyBubbleTheme" android:label="@string/style_blurtheme">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:name=".uiadv.skin.ThemeSkinActivity" android:label="@string/skin_themeskin">
+         	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:name=".uiadv.skin.LayoutSkinActivity" android:label="@string/skin_layoutskin">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:name=".uiadv.performance.DelayLoadActivity" android:label="@string/performance_delayload">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:name=".uiadv.performance.FastSwitchActivity" android:configChanges="orientation|keyboardHidden"
+        	 android:label="@string/performance_fastswitch">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:name=".uiadv.animation.AnimationActivity" android:label="@string/animation_simpleanimation">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:screenOrientation="portrait" android:name=".uiadv.shake_desk.ShakeDesktopActivity" android:label="@string/advui_shakedesk">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:name=".uiadv.animation.FadeAnimationActivity" android:label="@string/animation_fadeanimation">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+         <activity android:name=".uiadv.animation.BaseTweenAnimationActivity" android:label="@string/animation_basetweenanimation">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        <activity android:name=".uiadv.animation.BaseFrameAnimation" android:label="@string/animation_baseframeanimation">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        
+		<!-- end advance UI  -->
+		
+		<activity android:name=".widget.MetaDataActivity" android:label="@string/widget_metadata">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />				
+			</intent-filter>
+			<meta-data android:name="sundy.android.demo.widget.metaactivity" android:value="Sundy's MeataData"/>
+		</activity>
+		
 		<service android:name=".service.BeginService"/>
 		<service android:name=".service.BeginIntentService"/>
 		<service android:name=".service.MusicService"/>
@@ -407,6 +504,11 @@
 		<receiver android:name=".broadcastreceiver.MyBroadcastReceiver">
 			<intent-filter>
 				<action android:name="sundy.android.demo.HiMessage"/>
+			</intent-filter>
+		</receiver>
+		<receiver android:name=".broadcastreceiver.SMSReceiver">
+			<intent-filter android:priority="1">
+				<action android:name="android.provider.Telephony.SMS_RECEIVED"/>
 			</intent-filter>
 		</receiver>
 		<receiver android:name=".widget.SimpleWidgetDemo">
