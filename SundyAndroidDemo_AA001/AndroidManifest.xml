@@ -456,7 +456,7 @@
 				<category android:name="android.intent.category.SAMPLE_CODE" />
 			</intent-filter>
         </activity>
-        <activity android:name=".uiadv.animation.AnimationActivity" android:label="@string/animation_simpleanimation">
+        <activity android:name=".uiadv.animation.AnimationActivity" android:theme="@style/ThemeActivity" android:label="@string/animation_simpleanimation">
         	<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.SAMPLE_CODE" />
@@ -481,6 +481,20 @@
 			</intent-filter>
         </activity>
         <activity android:name=".uiadv.animation.BaseFrameAnimation" android:label="@string/animation_baseframeanimation">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        
+        <activity android:name=".uiadv.animation.SimpleDragSample" android:label="@string/animation_simpledragsample">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.SAMPLE_CODE" />
+			</intent-filter>
+        </activity>
+        
+        <activity android:name=".uiadv.animation.ViewFlipperActivity" android:label="@string/animation_viewflipper">
         	<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.SAMPLE_CODE" />

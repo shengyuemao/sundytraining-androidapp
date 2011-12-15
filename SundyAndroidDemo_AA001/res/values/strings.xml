@@ -99,6 +99,8 @@
 	<string name="animation_simpleanimation">Stage3_AdvanceUI/Animation/SimpleAnimation</string>
 	<string name="animation_fadeanimation">Stage3_AdvanceUI/Animation/FadeAnimation</string>
 	<string name="animation_baseframeanimation">Stage3_AdvanceUI/Animation/BaseFrameAnimation</string>
+	<string name="animation_simpledragsample">Stage3_AdvanceUI/Animation/SimpleDrag</string>
+	<string name="animation_viewflipper">Stage3_AdvanceUI/Animation/ViewFlipper</string>
 
 	<string name="widget_shortcut">SundyDemo</string>
 	<string name="widget_metadata">Stage3_Widget/MetaData</string>

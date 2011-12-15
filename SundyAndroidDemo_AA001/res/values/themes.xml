@@ -31,4 +31,9 @@
     <style name="MyBubbleTheme" parent="@android:style/Theme.Dialog" >
         <item name="android:windowBackground">@drawable/bubble</item>
     </style>
+    
+    <style name="ThemeActivity">   
+	<item name="android:windowAnimationStyle">@style/AnimationActivity</item>      
+	<item name="android:windowNoTitle">true</item>     
+	</style>
 </resources>
